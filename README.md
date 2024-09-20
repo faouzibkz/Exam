@@ -48,7 +48,7 @@ Ce projet est un examen pratique qui met en œuvre les concepts de CI/CD avec Do
 ---
 
 ## 📌 Note
-Pour suivre l'évolution de ce projet, consultez les [issues](lien_vers_issues) et les [pull requests](lien_vers_pull_requests).
+Pour suivre l'évolution de ce projet, consultez les [issues](https://github.com/faouzibkz/Exam/issues) et les [pull requests](https://github.com/faouzibkz/Exam/pulls).
 
 ---
 
