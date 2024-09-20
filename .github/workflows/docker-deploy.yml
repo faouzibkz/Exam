@@ -37,5 +37,5 @@ jobs:
 
       - name: Push Nginx Docker image
         run: |
-          docker tag nginx-image ${{ secrets.DOCKER_REPO }}-nginx
-          docker push ${{ secrets.DOCKER_REPO }}-nginx  
+          docker tag nginx-image ${{ secrets.DOCKER_REPO }}
+          docker push ${{ secrets.DOCKER_REPO }} 
