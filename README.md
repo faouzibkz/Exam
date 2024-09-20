@@ -1,5 +1,7 @@
-# Exam
+# Exam     
 # 🚀 Projet d'Examen GitHub CI/CD
+
+[![Docker Deploy](https://github.com/faouzibkz/Exam/actions/workflows/docker-deploy.yml/badge.svg)](https://github.com/faouzibkz/Exam/actions/workflows/docker-deploy.yml)
 
 ## À propos de moi
 👨‍🎓 **Boukhezzar Mohamed Faouzi**  
