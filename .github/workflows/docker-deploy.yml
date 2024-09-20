@@ -22,19 +22,20 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Build and push FastAPI Docker image
-        uses: docker/build-push-action@v3
-        with:
-          context: mini_groq_project
-          file: mini_groq_project/Dockerfile
-          push: true
-          tags: ${{ secrets.DOCKER_REPO }}:fastapi
+      - name: Build FastAPI Docker image
+        run: |
+          docker build -t fastapi-image -f mini_groq_project/dockerfile mini_groq_project
 
-      - name: Build and push Nginx Docker image
-        uses: docker/build-push-action@v3
-        with:
-          context: nginx
-          file: nginx/dockerfile
-          push: true
-          tags: ${{ secrets.DOCKER_REPO }}:nginx
+      - name: Push FastAPI Docker image
+        run: |
+          docker tag fastapi-image ${{ secrets.DOCKER_REPO }}
+          docker push ${{ secrets.DOCKER_REPO }}
 
+      - name: Build Nginx Docker image
+        run: |
+          docker build -t nginx-image -f nginx/dockerfile nginx
+
+      - name: Push Nginx Docker image
+        run: |
+          docker tag nginx-image ${{ secrets.DOCKER_REPO }}-nginx
+          docker push ${{ secrets.DOCKER_REPO }}-nginx
