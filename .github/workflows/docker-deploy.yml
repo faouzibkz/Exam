@@ -28,8 +28,8 @@ jobs:
 
       - name: Push FastAPI Docker image
         run: |
-          docker tag fastapi-image ${{ secrets.DOCKER_REPO }}
-          docker push ${{ secrets.DOCKER_REPO }}
+          docker tag fastapi-image ${{ secrets.DOCKER_REPO }}:latest
+          docker push ${{ secrets.DOCKER_REPO }}:latest
 
       - name: Build Nginx Docker image
         run: |
@@ -37,5 +37,6 @@ jobs:
 
       - name: Push Nginx Docker image
         run: |
-          docker tag nginx-image ${{ secrets.DOCKER_REPO }}/nginx
-          docker push ${{ secrets.DOCKER_REPO }}/nginx
+          docker tag nginx-image ${{ secrets.DOCKER_REPO }}:nginx  # Static tag for Nginx
+          docker push ${{ secrets.DOCKER_REPO }}:nginx  # Push with static tag
+
