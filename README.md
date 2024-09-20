@@ -4,7 +4,7 @@
 ## À propos de moi
 👨‍🎓 **Boukhezzar Mohamed Faouzi**  
 Étudiant en Master 2 chez H3 Hitema  
-[Mon GitHub](https://github.com/ton_utilisateur) 
+[Mon GitHub](https://github.com/faouzibkz) 
 
 ---
 
