@@ -28,7 +28,7 @@ jobs:
           context: mini_groq_project
           file: mini_groq_project/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_REPO }}:latest
+          tags: ${{ secrets.DOCKER_REPO }}:fastapi
 
       - name: Build and push Nginx Docker image
         uses: docker/build-push-action@v3
@@ -36,4 +36,5 @@ jobs:
           context: nginx
           file: nginx/dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_REPO }}-nginx:latest
+          tags: ${{ secrets.DOCKER_REPO }}:nginx
+
